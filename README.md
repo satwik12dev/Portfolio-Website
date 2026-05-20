@@ -18,14 +18,6 @@ This is a **personal portfolio website** for showcasing the projects, skills, an
 └── README.md                # You're reading it!
 ```
 
----
-
-## 🌐 Live Demo
-
-You can view the portfolio here:  
-➡️ [https://website-af6b9.web.app](https://website-af6b9.web.app) 
-
----
 
 ## 🚀 Features
 
