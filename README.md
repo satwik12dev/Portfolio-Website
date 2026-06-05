@@ -1,137 +1,172 @@
-# 💼 Satwik Saxena - Developer Portfolio
+# 🚀 Portfolio Website (React + Three.js)
 
-This is a **personal portfolio website** for showcasing the projects, skills, and experience of **Satwik Saxena**. It is built using HTML, CSS, and JavaScript, and is deployed using **Firebase Hosting**.
-
----
-
-## 📁 Project Structure
-
-```
-/
-├── index.html               # Main HTML file
-├── style.css                # Main CSS styles
-├── mediaqueries.css         # Responsive styles
-├── script.js                # JavaScript for mobile menu toggle
-├── assets/                  # Images, resume, and icons used in the site
-├── firebase.json            # Firebase Hosting config
-├── .firebaserc              # Firebase project ID config
-└── README.md                # You're reading it!
-```
-
-
-## 🚀 Features
-
-- **Responsive Design** with `mediaqueries.css`
-- **Navigation Bar** (desktop and hamburger menu for mobile)
-- **Profile Section** with profile picture, name, role, and contact buttons
-- **About Me Section** with education and skill highlights
-- **Experience Section** listing key technologies
-- **Projects Section** with GitHub links and live demos
-- **Contact Section** with email and LinkedIn
-- **Smooth Scrolling and Interactive UI**
+An interactive **3D personal portfolio** built with **React, Vite, and Three.js**, designed to showcase projects, skills, and experience in a modern and visually appealing way.  
 
 ---
 
-## 🛠️ Technologies Used
-
-- **HTML5**
-- **CSS3**
-- **JavaScript (Vanilla)**
-- **Firebase Hosting**
+## 🔗 Live Demo
+Check it out here: [My Portfolio](https://satwiksaxena-30fb9.web.app/)
 
 ---
 
-## 🧑‍💻 How to Run Locally
+## 📌 Table of Contents
+- [✨ Overview](#-overview)
+- [🌟 Features](#-features)
+- [🛠️ Tech Stack](#️-tech-stack)
+- [📦 Dependencies](#-dependencies)
+- [⚡ Getting Started](#-getting-started)
+- [📂 Project Structure](#-project-structure)
+- [🎨 Customization](#-customization)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
 
-1. **Clone this repository**
+---
 
+## ✨ Overview
+This project serves as a **personal portfolio website** that integrates **3D visuals** with clean UI components.  
+It is lightweight, fast, and scalable—perfect for developers who want to impress employers or clients with a modern web presence.  
+
+---
+
+## 🌟 Features
+- 🎬 **3D Interactivity** with **Three.js**
+- ⚡ **Blazing fast builds** powered by **Vite**
+- 🎨 Styled with **Tailwind CSS**
+- 📱 **Responsive design** for all devices
+- 🧩 **Reusable React components**
+- 🛠️ Pre-configured **ESLint** for clean code
+
+---
+
+## 🛠️ Tech Stack
+- **Frontend:** [React](https://reactjs.org/) + [Vite](https://vitejs.dev/)  
+- **3D Graphics:** [Three.js](https://threejs.org/)  
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)  
+- **Code Quality:** [ESLint](https://eslint.org/)  
+
+---
+
+## 📦 Dependencies
+
+Below are the core libraries required for this project:
+
+### Main Dependencies
 ```bash
-git clone https://github.com/yourusername/portfolio.git
-cd portfolio
+npm install react react-dom three
 ```
 
-2. **Install Firebase CLI**
+- `react` → Core React library  
+- `react-dom` → DOM bindings for React  
+- `three` → 3D rendering engine (Three.js)  
 
+### Development & Build Tools
 ```bash
-npm install -g firebase-tools
+npm install -D vite @vitejs/plugin-react
 ```
 
-3. **Login to Firebase**
+- `vite` → Fast dev server & build tool  
+- `@vitejs/plugin-react` → React + JSX support for Vite  
 
+### Tailwind CSS & Styling
 ```bash
-firebase login
+npm install -D tailwindcss postcss autoprefixer
 ```
+- `tailwindcss` → Utility-first CSS framework  
+- `postcss` → CSS transformations  
+- `autoprefixer` → Vendor prefixing  
 
-4. **Initialize Firebase (if not done)**
-
+Initialize Tailwind:
 ```bash
-firebase init
+npx tailwindcss init -p
 ```
 
-*(Skip if `.firebaserc` and `firebase.json` are already present)*
-
-5. **Deploy**
-
+### ESLint (Code Quality)
 ```bash
-firebase deploy
+npm install -D eslint eslint-plugin-react
 ```
-
-Your website will be deployed to Firebase Hosting.
+- `eslint` → JavaScript/React linting  
+- `eslint-plugin-react` → React-specific linting rules  
 
 ---
 
-## 🧾 Firebase Hosting Configuration
+## ⚡ Getting Started
 
-### `firebase.json`
-```json
-{
-  "hosting": {
-    "public": ".",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
-  }
-}
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/satwik12dev/Portfolio-using-React-and-three-js.git
+cd Portfolio-using-React-and-three-js
 ```
 
-### `.firebaserc`
-```json
-{
-  "projects": {
-    "default": "your-firebase-project-id"
-  }
-}
+### 2️⃣ Install Dependencies
+```bash
+npm install
 ```
-*(Replace `your-firebase-project-id` with your actual Firebase project ID)*
+
+### 3️⃣ Run Development Server
+```bash
+npm run dev
+```
+Open 👉 [http://localhost:5173](http://localhost:5173) in your browser.
+
+### 4️⃣ Build for Production
+```bash
+npm run build
+```
+
+### 5️⃣ Preview Production Build
+```bash
+npm run preview
+```
 
 ---
 
-## Screenshots
+## 📂 Project Structure
+```
+Portfolio-using-React-and-three-js/
+│
+├── public/              # Static assets
+├── src/
+│   ├── assets/          
+│   ├── components/    
+│   ├── constants/     
+│   ├── hoc/
+    ├── utils/          
+│   ├── App.jsx 
+    ├──index.css         
+│   └── main.jss     
+│   
+├── index.html           # Root HTML file
+├── vite.config.js       # Vite configuration
+├── tailwind.config.js
+├── package-lock.json
+├── postcss.config.js
+├── eslint.config.js
+└── package.json
+```
 
-### Home Page
-![Home Page](PortfolioLook/home.png)
-
-### About Page
-![About Page](PortfolioLook/about.png)
-
-### Project Page
-![Project Page](PortfolioLook/project.png)
-
-### Contact Page
-![Contact Page](PortfolioLook/contact.png)
 ---
 
-## Author
+## 🎨 Customization
+- ✏️ **Content:** Update text, bio, and projects inside React components.  
+- 🖼️ **3D Models/Animations:** Replace assets inside `src/assets/`.  
+- 🎨 **Theme/Colors:** Edit `tailwind.config.js` or apply custom Tailwind classes.  
 
-**Satwik Saxena**  
-📧 [satwiksaxena41@gmail.com](mailto:satwiksaxena41@gmail.com)  
-🔗 [LinkedIn](https://www.linkedin.com/in/satwik-12-dev)  
-💻 [GitHub](https://github.com/satwik12-dev)
+---
+
+## 🤝 Contributing
+Contributions are welcome!  
+
+1. Fork this repo  
+2. Create a feature branch → `git checkout -b feature/my-feature`  
+3. Commit your changes → `git commit -m "Added my feature"`  
+4. Push to branch → `git push origin feature/my-feature`  
+5. Open a Pull Request 🚀  
 
 ---
 
 ## 📄 License
+This project is licensed under the **MIT License**.  
+Feel free to use, modify, and distribute it as per the license.  
 
-This project is open source and available under the [MIT License](LICENSE).
+---
+👨‍💻 Developed by **Satwik Saxena**  
