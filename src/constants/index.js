@@ -38,6 +38,8 @@ import {
   AWS,
   SpringBoot,
   Clouds,
+  auth,
+  gitauth,
 } from "../assets";
 import { color } from "framer-motion";
 import { Cloud } from "lucide-react";
@@ -192,6 +194,20 @@ const experiences = [
       "Tested and optimized the application for reliability, performance, and security."
     ],
   },
+  {
+    title: "Authentication & Task Management API with RBAC",
+    company_name: "Personal Project",
+    icon: auth,
+    iconBg: "#383E56",
+    date: "Dec 2026 - feb 2026",
+    points: [
+      "Built a secure full-stack Task Management application using React, Node.js, Express.js, and PostgreSQL.",
+      "Implemented JWT-based Authentication and Role-Based Access Control (RBAC) to manage user permissions and protect API endpoints.",
+      "Developed RESTful APIs for user registration, login, role management, and task CRUD operations with robust validation and error handling.",
+      "Integrated PostgreSQL for persistent data storage and optimized database queries for efficient task and user management.",
+      "Containerized the application using Docker and Docker Compose, and integrated Swagger API documentation for streamlined development and deployment."
+    ],
+  },
 ];
 
 const testimonials = [
@@ -292,6 +308,39 @@ const projects = [
     ],
     image: tripguide,
     source_code_link: "https://github.com/satwik12dev/File-Hider.git",
+},
+  {
+  name: "Auth System & Task Management API",
+  description:
+    "A full-stack task management platform built with React, Node.js, Express.js, and PostgreSQL. Features JWT-based authentication, Role-Based Access Control (RBAC), secure REST APIs, task CRUD operations, Swagger documentation, and Dockerized deployment.",
+  tags: [
+    {
+      name: "React.js",
+      color: "blue-text-gradient",
+    },
+    {
+      name: "Node.js",
+      color: "green-text-gradient",
+    },
+    {
+      name: "PostgreSQL",
+      color: "pink-text-gradient",
+    },
+    {
+      name: "JWT",
+      color: "white-text-gradient",
+    },
+    {
+      name: "Docker",
+      color: "green-text-gradient",
+    },
+    {
+      name: "RBAC",
+      color: "blue-text-gradient",
+    },
+  ],
+  image: gitauth,
+  source_code_link: "https://github.com/satwik12dev/Auth-System-Task-API.git",
 },
 ];
 const certificates = [

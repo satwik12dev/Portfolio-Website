@@ -34,6 +34,7 @@ import tesla from "./truck.png";
 import carrent from "./Ezytranship.png";
 import jobit from "./cat.png";
 import tripguide  from "./filehider.png";
+import gitauth from "./auth.png";
 
 
 import AWS from "./cert/AWS.png";
@@ -51,6 +52,7 @@ import agile from "./icons/agile.png";
 import tcs from "./icons/tcs.png";
 import CA from "./cert/CA.png";
 import ca from "./icons/ca.png";
+import auth from "./icons/auth.png";
 export {
   ca,
   CA,
@@ -97,4 +99,6 @@ export {
   kubernetes,
   SpringBoot,
   AWS,
+  auth,
+  gitauth,
 };
