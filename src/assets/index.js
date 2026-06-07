@@ -7,7 +7,7 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 import java from "./tech/java.png";
-
+import gra from "./resumeanalyser.png";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -35,6 +35,7 @@ import carrent from "./Ezytranship.png";
 import jobit from "./cat.png";
 import tripguide  from "./filehider.png";
 import gitauth from "./auth.png";
+import ra from "./icons/resumeanalyzer.png";
 
 
 import AWS from "./cert/AWS.png";
@@ -101,4 +102,6 @@ export {
   AWS,
   auth,
   gitauth,
+  ra,
+  gra,
 };

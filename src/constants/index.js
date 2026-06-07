@@ -40,6 +40,8 @@ import {
   Clouds,
   auth,
   gitauth,
+  ra,
+  gra,
 } from "../assets";
 import { color } from "framer-motion";
 import { Cloud } from "lucide-react";
@@ -208,6 +210,20 @@ const experiences = [
       "Containerized the application using Docker and Docker Compose, and integrated Swagger API documentation for streamlined development and deployment."
     ],
   },
+  {
+  title: "AI Resume Analyzer",
+  company_name: "Personal Project",
+  icon: ra,
+  iconBg: "#383E56",
+  date: "2026",
+  points: [
+    "Developed an AI-powered Resume Analyzer using React.js, Node.js, Express.js, and MongoDB to evaluate resumes against job descriptions.",
+    "Integrated Google Gemini AI to generate ATS compatibility scores, identify missing keywords, and provide personalized resume improvement suggestions.",
+    "Built secure REST APIs for resume uploads, job description analysis, and AI-generated feedback with robust validation and error handling.",
+    "Implemented resume parsing and keyword matching algorithms to assess candidate-job alignment and highlight strengths and weaknesses.",
+    "Designed a responsive user interface with real-time analysis results, improving user experience and helping candidates optimize resumes for recruitment systems."
+  ],
+},
 ];
 
 const testimonials = [
@@ -341,6 +357,35 @@ const projects = [
   ],
   image: gitauth,
   source_code_link: "https://github.com/satwik12dev/Auth-System-Task-API.git",
+},
+  {
+  name: "AI Resume Analyzer Using Generative AI",
+  description:
+    "An AI-powered Resume Analyzer built with React.js, Node.js, Express.js, and Google Gemini AI. It analyzes resumes against job descriptions, provides ATS compatibility scores, identifies missing keywords, highlights strengths and weaknesses, and generates actionable suggestions to improve resume performance.",
+  tags: [
+    {
+      name: "React.js",
+      color: "blue-text-gradient",
+    },
+    {
+      name: "Node.js",
+      color: "green-text-gradient",
+    },
+    {
+      name: "Express.js",
+      color: "green-text-gradient",
+    },
+    {
+      name: "Gemini AI",
+      color: "pink-text-gradient",
+    },
+    {
+      name: "MongoDB",
+      color: "green-text-gradient",
+    },
+  ],
+  image: gra,
+  source_code_link: "https://github.com/satwik12dev/Gen-AI-Resume-Analyzer.git",
 },
 ];
 const certificates = [
