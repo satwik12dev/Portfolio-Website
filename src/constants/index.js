@@ -42,6 +42,8 @@ import {
   gitauth,
   ra,
   gra,
+  email,
+  iemail,
 } from "../assets";
 import { color } from "framer-motion";
 import { Cloud } from "lucide-react";
@@ -61,18 +63,13 @@ export const navLinks = [
     id: "work",
     title: "Work",
   },
-
   {
     id:"mywork",
-    title:"Projects",
+    title:"Projects Links",
   },
   {
   id :"certificates",
   title:"Certificates",
-  },
-  {
-    id :"testimonials",
-    title:"Feedbacks",
   },
   {
     id: "contact",
@@ -82,7 +79,7 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Software Engineer",
     icon: web,
   },
   {
@@ -111,8 +108,7 @@ const technologies = [
   {
     name: "JavaScript",
     icon: javascript,
-  },
-  
+  },  
   {
     name: "React JS",
     icon: reactjs,
@@ -154,7 +150,6 @@ const technologies = [
     icon:SpringBoot,
   }
 ];
-
 const experiences = [
   {
     title: "Image classification of cats and dog",
@@ -215,7 +210,7 @@ const experiences = [
   company_name: "Personal Project",
   icon: ra,
   iconBg: "#383E56",
-  date: "2026",
+  date: "feb 2026 - Mar 2026",
   points: [
     "Developed an AI-powered Resume Analyzer using React.js, Node.js, Express.js, and MongoDB to evaluate resumes against job descriptions.",
     "Integrated Google Gemini AI to generate ATS compatibility scores, identify missing keywords, and provide personalized resume improvement suggestions.",
@@ -224,33 +219,20 @@ const experiences = [
     "Designed a responsive user interface with real-time analysis results, improving user experience and helping candidates optimize resumes for recruitment systems."
   ],
 },
-];
-
-const testimonials = [
   {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/68.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Satwik does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/39.jpg",
-  },
-  {
-    testimonial:
-      "After Satwik optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/men/37.jpg",
-  },
+  title: "Email Generator Using Java Spring Boot, React.js, and Gemini AI",
+  company_name: "Personal Project",
+  icon: iemail,
+  iconBg: "#383E56",
+  date: "Mar 2026 - Apr 2026",
+  points: [
+    "Developed an AI-powered Email Generator using React.js, Spring Boot, and REST APIs to automatically generate professional email replies based on user input.",
+    "Integrated Large Language Models (Gemini AI/Llama) to create context-aware email responses with customizable tones such as professional, formal, friendly, and concise.",
+    "Built secure backend services using Spring Boot and WebClient to communicate with AI APIs, process requests, and return generated email content in real time.",
+    "Implemented robust exception handling, API validation, and response parsing to ensure reliable AI-generated outputs and seamless user experience.",
+    "Designed a responsive and user-friendly interface enabling users to generate, review, and customize email drafts efficiently, improving productivity and communication."
+  ],
+}
 ];
 
 const projects = [
@@ -387,6 +369,31 @@ const projects = [
   image: gra,
   source_code_link: "https://github.com/satwik12dev/Gen-AI-Resume-Analyzer.git",
 },
+{
+  name: "Email Generator Using Java Spring Boot",
+  description:
+    "Developed a full-stack AI Email Generator using React.js and Spring Boot that automates email drafting through Generative AI. The platform generates personalized and context-aware email responses, supports customizable tones, integrates with LLM APIs using Spring WebClient, and delivers real-time content generation through a responsive user interface.",
+  tags: [
+    {
+      name: "React.js",
+      color: "blue-text-gradient",
+    },
+    {
+      name: "Spring Boot",
+      color: "green-text-gradient",
+    },
+    {
+      name: "Java",
+      color: "orange-text-gradient",
+    },
+    {
+      name: "Gemini AI",
+      color: "pink-text-gradient",
+    },
+  ],
+  image: email,
+  source_code_link: "https://github.com/satwik12dev/Email-Generator-API-Using-Spring-Boot-and-Spring-AI.git",
+}
 ];
 const certificates = [
   {
@@ -394,7 +401,7 @@ const certificates = [
     issuer: "Amazon Web Services",
     date: "May 2025",
     image: AWS,
-    icon: aws, // 👈 Icon for timeline circle
+    icon: aws, 
     link: "https://aws.amazon.com/certification/",
     description:
       "Validated understanding of AWS Cloud fundamentals, pricing, and core services.",
@@ -405,7 +412,7 @@ const certificates = [
     issuer: "IBM",
     date: "July 2025",
     image: Clouds,
-    icon: cloud, // 👈
+    icon: cloud, 
     link: "https://courses.cognitiveclass.ai/certificates/b24e468eea0e46c8bd51d8bff82b0a52",
     description:
       "Hands-on training on Generative AI, Vertex AI, and responsible AI practices.",
@@ -461,13 +468,11 @@ const certificates = [
   date: "Jul - Oct 2025",
   image: CA,
   icon:ca,
-  link: CA, // 👈 Add certificate link or image path
+  link: CA, 
   description:
     "Successfully completed a 12-week NPTEL course on Computer Architecture, gaining strong knowledge of processor design, memory hierarchy, instruction sets, and performance optimization concepts.",
   tags: ["Computer Architecture", "NPTEL", "System Design"],
 }
-
 ];
 
-
-export { services, technologies, experiences, testimonials, projects, certificates };
+export { services, technologies, experiences, projects, certificates };

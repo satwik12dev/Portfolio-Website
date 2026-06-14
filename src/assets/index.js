@@ -54,6 +54,9 @@ import tcs from "./icons/tcs.png";
 import CA from "./cert/CA.png";
 import ca from "./icons/ca.png";
 import auth from "./icons/auth.png";
+import email from "./Email.png";
+import iemail from "./icons/email.png";
+
 export {
   ca,
   CA,
@@ -104,4 +107,6 @@ export {
   gitauth,
   ra,
   gra,
+  email,
+  iemail,
 };
