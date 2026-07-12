@@ -276,7 +276,7 @@ export const PROJECTS: Project[] = [
       "MySQL",
       "JWT",
     ],
-    github: "#",
+    github: "https://github.com/satwik12dev/CRM-Inventory-System-.git",
     demo: "#",
     accent: "#3B82F6",
   },
