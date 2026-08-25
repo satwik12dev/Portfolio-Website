@@ -14,7 +14,7 @@ export const PROFILE = {
   email: "satwiksaxena41@gmail.com",
   phone: "+91 8126666980",
   github: "https://github.com/satwik12dev",
-  linkedin: "https://linkedin.com/in/satwik-saxena",
+  linkedin: "https://www.linkedin.com/in/satwik-12-dev/",
   resumeUrl: "/Resume.pdf",
 };
 
