@@ -413,21 +413,18 @@ function ProjectCard({
               <Github className="h-3.5 w-3.5 text-cyan-600 dark:text-accent-400" />
               <span>GitHub</span>
             </a>
-          )}
-          {project.demo && project.demo !== '#' && (
+
             <a
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-lg bg-cyan-500/10 dark:bg-accent-400/10 hover:bg-cyan-500/20 dark:hover:bg-accent-400/20 border border-cyan-500/30 dark:border-accent-400/30 px-2.5 py-1.5 text-xs font-mono text-cyan-700 dark:text-accent-300 transition-all font-medium"
+              className="inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-semibold text-ink-900 transition-all hover:scale-[1.02]"
+              style={{ background: project.accent }}
             >
               <ExternalLink className="h-3.5 w-3.5" />
-              <span>Live</span>
+              Live Demo
             </a>
-          )}
-          {(!project.github || project.github === '#') && (!project.demo || project.demo === '#') && (
-            <span className="text-[11px] font-mono text-slate-400 dark:text-white/40">Private System</span>
-          )}
+          </div>
         </div>
 
         <button

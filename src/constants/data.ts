@@ -444,7 +444,7 @@ export const PROJECTS: Project[] = [
       "Gemini AI API",
       "TailwindCSS",
     ],
-    github: "https://github.com/satwik12dev/Gen-AI-Resume-Analyzer",
+    github: "#",
     demo: "#",
     accent: "#A855F7",
     category: "AI & Gen-AI",
