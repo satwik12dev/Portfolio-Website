@@ -400,7 +400,7 @@ function ProjectCard({
         </div>
       </div>
 
-      {/* Card Footer Actions */}
+            {/* Card Footer Actions */}
       <div className="px-5 pb-5 pt-2 flex items-center justify-between border-t border-slate-200/80 dark:border-white/[0.06]">
         <div className="flex items-center gap-2">
           {project.github && project.github !== '#' && (
@@ -413,20 +413,28 @@ function ProjectCard({
               <Github className="h-3.5 w-3.5 text-cyan-600 dark:text-accent-400" />
               <span>GitHub</span>
             </a>
+          )}
 
-            <a
-              href={project.demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-semibold text-ink-900 transition-all hover:scale-[1.02]"
-              style={{ background: project.accent }}
-            >
-              <ExternalLink className="h-3.5 w-3.5" />
-              Live Demo
-            </a>
-          </div>
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-semibold text-ink-900 transition-all hover:scale-[1.02]"
+            style={{ background: project.accent }}
+          >
+            <ExternalLink className="h-3.5 w-3.5" />
+            Live Demo
+          </a>
         </div>
 
+        <button
+          onClick={onOpenDetails}
+          className="inline-flex items-center gap-1 text-xs font-mono text-cyan-600 dark:text-accent-300 hover:text-cyan-700 dark:hover:text-accent-200 transition-colors font-semibold"
+        >
+          <span>Inspect</span>
+          <ArrowUpRight className="h-3.5 w-3.5" />
+        </button>
+      </div>
         <button
           onClick={onOpenDetails}
           className="inline-flex items-center gap-1 text-xs font-mono text-cyan-600 dark:text-accent-300 hover:text-cyan-700 dark:hover:text-accent-200 transition-colors font-semibold"
