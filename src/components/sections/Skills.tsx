@@ -35,7 +35,7 @@ const CATEGORY_META: Record<
   },
   Database: {
     title: "Database Architecture",
-    subtitle: "Relational ACID integrity with PostgreSQL/MySQL & flexible NoSQL schemas with MongoDB.",
+    subtitle: "Relational ACID integrity with MySQL, flexible NoSQL with MongoDB & high-speed caching with Redis.",
     icon: Database,
     color: "text-blue-600 dark:text-blue-400",
   },
@@ -160,6 +160,13 @@ function TechIcon({ name, color }: { name: string; color: string }) {
 
     case "MySQL":
       return <Database className="h-6 w-6" style={{ color }} />;
+
+    case "Redis":
+      return (
+        <svg className="h-6 w-6" viewBox="0 0 24 24" fill={color}>
+          <path d="M11.996 0a1.92 1.92 0 0 0-.858.204L1.758 4.887a1.92 1.92 0 0 0-1.062 1.71v10.806a1.92 1.92 0 0 0 1.062 1.71l9.38 4.683a1.92 1.92 0 0 0 1.716 0l9.38-4.683a1.92 1.92 0 0 0 1.062-1.71V6.597a1.92 1.92 0 0 0-1.062-1.71L12.854.204A1.92 1.92 0 0 0 11.996 0zm.004 2.246 8.355 4.172-8.355 4.172-8.355-4.172zm-9.355 5.96 8.355 4.172v8.344L2.645 16.55zm18.71 0v8.344l-8.355 4.172V12.378z" />
+        </svg>
+      );
 
     case "Gemini AI / LLMs":
       return <Bot className="h-6 w-6" style={{ color }} />;

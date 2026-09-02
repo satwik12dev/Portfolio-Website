@@ -16,8 +16,8 @@ import { cn } from '../../utils/cn';
 const CATEGORIES = [
   'All',
   'Full-Stack & Backend',
+  'Java & Spring Boot',
   'AI & Gen-AI',
-  'Java & Systems',
 ] as const;
 
 export default function Projects() {
@@ -30,10 +30,7 @@ export default function Projects() {
       : PROJECTS.filter((p) => p.category === selectedCategory);
 
   return (
-    <section
-      id="projects"
-      className="relative section-pad py-24 sm:py-32 overflow-hidden"
-    >
+    <section id="projects" className="relative section-pad py-24 sm:py-32 overflow-hidden">
       {/* Background Subtle Glows */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 -left-48 h-[500px] w-[500px] rounded-full bg-cyan-500/10 dark:bg-accent-400/8 blur-[180px]" />
@@ -54,40 +51,18 @@ export default function Projects() {
         {/* Telemetry Summary Bar */}
         <div className="mx-auto mt-10 max-w-4xl grid grid-cols-2 sm:grid-cols-4 gap-3">
           {[
-            {
-              label: 'Total Projects',
-              val: `${PROJECTS.length}+ Systems`,
-              highlight: 'text-cyan-600 dark:text-accent-300',
-            },
-            {
-              label: 'Architecture Focus',
-              val: 'Backend & Full-Stack',
-              highlight: 'text-slate-900 dark:text-white',
-            },
-            {
-              label: 'Core AI Frameworks',
-              val: 'Gemini AI & CNN',
-              highlight: 'text-slate-900 dark:text-white',
-            },
-            {
-              label: 'Open-Source Code',
-              val: '100% on GitHub',
-              highlight: 'text-emerald-600 dark:text-emerald-400',
-            },
+            { label: 'Total Projects', val: `${PROJECTS.length}+ Systems`, highlight: 'text-cyan-600 dark:text-accent-300' },
+            { label: 'Architecture Focus', val: 'Backend & Full-Stack', highlight: 'text-slate-900 dark:text-white' },
+            { label: 'Core AI Frameworks', val: 'Gemini AI & CNN', highlight: 'text-slate-900 dark:text-white' },
+            { label: 'Open-Source Code', val: '100% on GitHub', highlight: 'text-emerald-600 dark:text-emerald-400' },
           ].map((item, idx) => (
             <div
               key={idx}
               className="rounded-2xl bg-white/80 dark:bg-white/[0.02] border border-slate-200/90 dark:border-white/10 p-3.5 text-center backdrop-blur-md transition-all hover:bg-white dark:hover:bg-white/[0.04] shadow-sm"
             >
-              <div
-                className={cn(
-                  'text-sm sm:text-base font-bold font-mono',
-                  item.highlight
-                )}
-              >
+              <div className={cn('text-sm sm:text-base font-bold font-mono', item.highlight)}>
                 {item.val}
               </div>
-
               <div className="text-[11px] font-mono text-slate-500 dark:text-white/45 mt-0.5 truncate">
                 {item.label}
               </div>
@@ -102,7 +77,6 @@ export default function Projects() {
               cat === 'All'
                 ? PROJECTS.length
                 : PROJECTS.filter((p) => p.category === cat).length;
-
             const isSelected = selectedCategory === cat;
 
             return (
@@ -117,7 +91,6 @@ export default function Projects() {
                 )}
               >
                 <span>{cat}</span>
-
                 <span
                   className={cn(
                     'rounded-md px-1.5 py-0.5 text-[10px] transition-colors',
@@ -153,7 +126,6 @@ export default function Projects() {
       {/* ========================================================================= */}
       {/* PROJECT DETAILS MODAL                                                     */}
       {/* ========================================================================= */}
-
       <AnimatePresence>
         {activeProject && (
           <motion.div
@@ -195,10 +167,7 @@ export default function Projects() {
                     borderColor: `${activeProject.accent}40`,
                   }}
                 >
-                  <Code2
-                    className="h-5 w-5"
-                    style={{ color: activeProject.accent }}
-                  />
+                  <Code2 className="h-5 w-5" style={{ color: activeProject.accent }} />
                 </span>
 
                 <div>
@@ -206,7 +175,6 @@ export default function Projects() {
                     <span className="text-[10px] font-mono font-semibold text-cyan-700 dark:text-accent-300 bg-cyan-50 dark:bg-accent-400/10 border border-cyan-200 dark:border-accent-400/30 px-2 py-0.5 rounded">
                       {activeProject.category || 'Engineering Project'}
                     </span>
-
                     {activeProject.featured && (
                       <span className="inline-flex items-center gap-1 text-[10px] font-mono font-semibold text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-500/10 border border-amber-300 dark:border-amber-500/30 px-1.5 py-0.5 rounded">
                         <Star className="h-3 w-3 fill-amber-500 dark:fill-amber-400" />
@@ -214,7 +182,6 @@ export default function Projects() {
                       </span>
                     )}
                   </div>
-
                   <h3 className="mt-1 text-lg sm:text-xl font-bold text-slate-900 dark:text-white tracking-tight">
                     {activeProject.title}
                   </h3>
@@ -228,9 +195,7 @@ export default function Projects() {
                   alt={activeProject.title}
                   className="w-full h-full object-cover"
                 />
-
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-
                 {activeProject.impact && (
                   <span className="absolute bottom-3 left-3 text-xs font-mono text-white bg-black/75 border border-white/15 px-2.5 py-1 rounded-lg backdrop-blur-md">
                     {activeProject.impact}
@@ -244,20 +209,16 @@ export default function Projects() {
               </p>
 
               {/* Highlights */}
-              {activeProject.highlights &&
-                activeProject.highlights.length > 0 && (
-                  <div className="mt-3.5 space-y-1.5">
-                    {activeProject.highlights.map((h, i) => (
-                      <div
-                        key={i}
-                        className="flex items-center gap-2 text-xs text-slate-700 dark:text-white/80 font-mono"
-                      >
-                        <CheckCircle2 className="h-3.5 w-3.5 text-cyan-600 dark:text-accent-400 shrink-0" />
-                        <span>{h}</span>
-                      </div>
-                    ))}
-                  </div>
-                )}
+              {activeProject.highlights && activeProject.highlights.length > 0 && (
+                <div className="mt-3.5 space-y-1.5">
+                  {activeProject.highlights.map((h, i) => (
+                    <div key={i} className="flex items-center gap-2 text-xs text-slate-700 dark:text-white/80 font-mono">
+                      <CheckCircle2 className="h-3.5 w-3.5 text-cyan-600 dark:text-accent-400 shrink-0" />
+                      <span>{h}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
 
               {/* Stack tags */}
               <div className="mt-3.5 flex flex-wrap gap-1.5">
@@ -278,32 +239,28 @@ export default function Projects() {
                 </span>
 
                 <div className="flex items-center gap-2 flex-wrap">
-                  {activeProject.demo &&
-                    activeProject.demo !== '#' && (
-                      <a
-                        href={activeProject.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 rounded-xl bg-cyan-500/15 hover:bg-cyan-500/25 dark:bg-accent-400/15 dark:hover:bg-accent-400/25 border border-cyan-500/30 dark:border-accent-400/30 px-3.5 py-1.5 text-xs font-mono font-semibold text-cyan-800 dark:text-accent-300 transition-all shadow-sm"
-                      >
-                        <ExternalLink className="h-3.5 w-3.5" />
-                        <span>Live Platform</span>
-                      </a>
-                    )}
-
-                  {activeProject.github &&
-                    activeProject.github !== '#' && (
-                      <a
-                        href={activeProject.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 rounded-xl bg-slate-100 dark:bg-white/[0.08] hover:bg-slate-200 dark:hover:bg-white/15 border border-slate-200 dark:border-white/15 px-3.5 py-1.5 text-xs font-mono font-medium text-slate-800 dark:text-white transition-all shadow-sm"
-                      >
-                        <Github className="h-3.5 w-3.5" />
-                        <span>View GitHub Code</span>
-                      </a>
-                    )}
-
+                  {activeProject.demo && activeProject.demo !== '#' && (
+                    <a
+                      href={activeProject.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-xl bg-cyan-500/15 hover:bg-cyan-500/25 dark:bg-accent-400/15 dark:hover:bg-accent-400/25 border border-cyan-500/30 dark:border-accent-400/30 px-3.5 py-1.5 text-xs font-mono font-semibold text-cyan-800 dark:text-accent-300 transition-all shadow-sm"
+                    >
+                      <ExternalLink className="h-3.5 w-3.5" />
+                      <span>Live Platform</span>
+                    </a>
+                  )}
+                  {activeProject.github && activeProject.github !== '#' && (
+                    <a
+                      href={activeProject.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-xl bg-slate-100 dark:bg-white/[0.08] hover:bg-slate-200 dark:hover:bg-white/15 border border-slate-200 dark:border-white/15 px-3.5 py-1.5 text-xs font-mono font-medium text-slate-800 dark:text-white transition-all shadow-sm"
+                    >
+                      <Github className="h-3.5 w-3.5" />
+                      <span>View GitHub Code</span>
+                    </a>
+                  )}
                   <button
                     onClick={() => setActiveProject(null)}
                     className="rounded-xl bg-cyan-600 hover:bg-cyan-500 dark:bg-accent-400 dark:hover:bg-accent-300 text-white dark:text-ink-950 px-4 py-1.5 text-xs font-bold transition-all shadow-sm"
@@ -328,21 +285,12 @@ function ProjectCard({
   onOpenDetails: () => void;
 }) {
   const cardRef = useRef<HTMLDivElement>(null);
-
-  const [mousePos, setMousePos] = useState({
-    x: 0,
-    y: 0,
-  });
-
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
 
-  const handleMouseMove = (
-    e: React.MouseEvent<HTMLDivElement>
-  ) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!cardRef.current) return;
-
     const rect = cardRef.current.getBoundingClientRect();
-
     setMousePos({
       x: e.clientX - rect.left,
       y: e.clientY - rect.top,
@@ -363,10 +311,10 @@ function ProjectCard({
       whileHover={{ y: -6, scale: 1.015 }}
       whileTap={{ scale: 0.98 }}
       className={cn(
-        'group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-white/80 dark:bg-white/[0.02] border transition-all duration-300 backdrop-blur-xl hover:bg-white dark:hover:bg-white/[0.04] shadow-sm shadow-slate-200/50 dark:shadow-none hover:shadow-xl dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)]',
+        "group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-white/80 dark:bg-white/[0.02] border transition-all duration-300 backdrop-blur-xl hover:bg-white dark:hover:bg-white/[0.04] shadow-sm shadow-slate-200/50 dark:shadow-none hover:shadow-xl dark:hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)]",
         project.featured
-          ? 'border-cyan-500/40 dark:border-accent-400/35 hover:border-cyan-500/70 dark:hover:border-accent-400/60'
-          : 'border-slate-200/90 dark:border-white/10 hover:border-cyan-500/40 dark:hover:border-accent-400/40'
+          ? "border-cyan-500/40 dark:border-accent-400/35 hover:border-cyan-500/70 dark:hover:border-accent-400/60"
+          : "border-slate-200/90 dark:border-white/10 hover:border-cyan-500/40 dark:hover:border-accent-400/40"
       )}
     >
       {/* Interactive Cursor Spotlight */}
@@ -443,7 +391,6 @@ function ProjectCard({
                 {tech}
               </span>
             ))}
-
             {project.stack.length > 4 && (
               <span className="rounded-md bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 px-1.5 py-0.5 font-mono text-[10px] text-slate-500 dark:text-white/40">
                 +{project.stack.length - 4}
@@ -456,7 +403,6 @@ function ProjectCard({
       {/* Card Footer Actions */}
       <div className="px-5 pb-5 pt-2 flex items-center justify-between border-t border-slate-200/80 dark:border-white/[0.06]">
         <div className="flex items-center gap-2">
-          {/* GitHub */}
           {project.github && project.github !== '#' && (
             <a
               href={project.github}
@@ -468,23 +414,22 @@ function ProjectCard({
               <span>GitHub</span>
             </a>
           )}
-
-          {/* Live Demo */}
           {project.demo && project.demo !== '#' && (
             <a
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-semibold text-ink-900 transition-all hover:scale-[1.02]"
-              style={{ background: project.accent }}
+              className="inline-flex items-center gap-1.5 rounded-lg bg-cyan-500/10 dark:bg-accent-400/10 hover:bg-cyan-500/20 dark:hover:bg-accent-400/20 border border-cyan-500/30 dark:border-accent-400/30 px-2.5 py-1.5 text-xs font-mono text-cyan-700 dark:text-accent-300 transition-all font-medium"
             >
               <ExternalLink className="h-3.5 w-3.5" />
-              Live Demo
+              <span>Live</span>
             </a>
+          )}
+          {(!project.github || project.github === '#') && (!project.demo || project.demo === '#') && (
+            <span className="text-[11px] font-mono text-slate-400 dark:text-white/40">Private System</span>
           )}
         </div>
 
-        {/* Inspect */}
         <button
           onClick={onOpenDetails}
           className="inline-flex items-center gap-1 text-xs font-mono text-cyan-600 dark:text-accent-300 hover:text-cyan-700 dark:hover:text-accent-200 transition-colors font-semibold"

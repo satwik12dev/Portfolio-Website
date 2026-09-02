@@ -14,7 +14,7 @@ export const PROFILE = {
   email: "satwiksaxena41@gmail.com",
   phone: "+91 8126666980",
   github: "https://github.com/satwik12dev",
-  linkedin: "https://www.linkedin.com/in/satwik-12-dev/",
+  linkedin: "https://linkedin.com/in/satwik-saxena",
   resumeUrl: "/Resume.pdf",
 };
 
@@ -166,6 +166,13 @@ export const SKILLS: Skill[] = [
     level: 91,
     category: "Database",
     tag: "RDBMS",
+  },
+  {
+    name: "Redis",
+    color: "#DC382D",
+    level: 85,
+    category: "Database",
+    tag: "In-Memory & Cache",
   },
 
   // AI & Tools / DevOps
@@ -368,13 +375,44 @@ export type Project = {
   github: string;
   demo: string;
   accent: string;
-  category?: "All" | "Full-Stack & Backend" | "AI & Gen-AI" | "Java & Systems";
+  category?: "All" | "Full-Stack & Backend" | "AI & Gen-AI" | "Java & Spring Boot";
   featured?: boolean;
   impact?: string;
   highlights?: string[];
 };
 
 export const PROJECTS: Project[] = [
+  {
+    title: "Production-Ready URL Shortener",
+    description:
+      "A production-grade, cloud-deployed URL Shortener platform built from scratch with React and Spring Boot. Features JWT authentication, BCrypt password hashing, JPA/Hibernate persistence on Aiven MySQL, Actuator health monitoring, and multi-cloud architecture.",
+    image: "urlshortener.png",
+    stack: [
+      "React.js",
+      "Spring Boot",
+      "Java",
+      "Spring Security",
+      "JWT",
+      "MySQL",
+      "Hibernate",
+      "Actuator",
+      "Vercel",
+      "Render",
+    ],
+    github: "https://github.com/satwik12dev",
+    demo: "https://spring-boot-url-shortner.vercel.app",
+    accent: "#10B981",
+    category: "Java & Spring Boot",
+    featured: true,
+    impact: "Spring Security JWT • Multi-Cloud Deployed",
+    highlights: [
+      "Custom Spring Security JWT filter and BCrypt password hashing for protected REST endpoints and user-specific URL management.",
+      "Engineered URL shortening pipeline mapping long URLs to generated slugs with MySQL 8.4 persistence on Aiven Cloud.",
+      "Integrated Spring Boot Actuator (/actuator/health) for production health metrics and uptime monitoring.",
+      "Architected multi-cloud deployment with React/Vite on Vercel, Spring Boot REST API on Render, and MySQL on Aiven Cloud.",
+      "Designed JPA/Hibernate entity mappings for Users, URL mappings, and Click telemetry.",
+    ],
+  },
   {
     title: "Payment Gateway CMS – Merchant Operations Platform",
     description:
@@ -418,7 +456,7 @@ export const PROJECTS: Project[] = [
       "JWT & RBAC",
       "REST APIs",
     ],
-    github: "https://github.com/satwik12dev/ZymGo.git",
+    github: "https://github.com/satwik12dev",
     demo: "#",
     accent: "#22D3EE",
     category: "Full-Stack & Backend",
@@ -444,7 +482,7 @@ export const PROJECTS: Project[] = [
       "Gemini AI API",
       "TailwindCSS",
     ],
-    github: "https://github.com/satwik12dev/Gen-AI-Resume-Analyzer.git",
+    github: "https://github.com/satwik12dev/Gen-AI-Resume-Analyzer",
     demo: "#",
     accent: "#A855F7",
     category: "AI & Gen-AI",
@@ -495,7 +533,7 @@ export const PROJECTS: Project[] = [
       "JWT",
       "REST APIs",
     ],
-    github: "https://github.com/satwik12dev/CRM-Inventory-System-.git",
+    github: "https://github.com/satwik12dev",
     demo: "#",
     accent: "#3B82F6",
     category: "Full-Stack & Backend",
@@ -523,7 +561,7 @@ export const PROJECTS: Project[] = [
       "https://github.com/satwik12dev/Email-Generator-API-Using-Spring-Boot-and-Spring-AI",
     demo: "#",
     accent: "#EC4899",
-    category: "AI & Gen-AI",
+    category: "Java & Spring Boot",
     impact: "Spring Boot 3 • Spring AI Integration",
     highlights: [
       "Context-injected LLM prompt engineering chains",
@@ -533,27 +571,33 @@ export const PROJECTS: Project[] = [
   },
 
   {
-    title: "File Hider Secure Vault",
+    title: "CypherVault – Zero-Trace Secure Storage Engine",
     description:
-      "A robust Java CLI security application that encrypts and hides sensitive disk files using cryptographic ciphers, SMTP Two-Factor OTP authentication, and JDBC MySQL transaction storage.",
-    image: "filehider.png",
+      "A zero-trace, anti-forensic file encapsulation and secure storage engine built with Java 21 and Spring Boot 3.3. Ingests raw binary streams directly into MySQL BLOB persistence, sanitizes and unlinks host disk sectors to eliminate forensic traces, and gates access behind time-bounded 2FA SMTP OTP verification.",
+    image: "cyphervault.png",
     stack: [
-      "Java",
-      "SMTP 2FA",
-      "JDBC",
-      "MySQL",
-      "Maven",
-      "Cryptography",
+      "Java 21",
+      "Spring Boot 3.3",
+      "Spring Security",
+      "Spring Data JPA",
+      "MySQL 8.0+",
+      "JavaMailSender",
+      "BLOB Storage",
+      "REST APIs",
+      "Tactical HUD",
     ],
     github: "https://github.com/satwik12dev/File-Hider",
     demo: "#",
     accent: "#F97316",
-    category: "Java & Systems",
-    impact: "AES Encryption • 2FA SMTP OTP",
+    category: "Java & Spring Boot",
+    featured: true,
+    impact: "Zero-Trace Scrubbing • 2FA SMTP Security",
     highlights: [
-      "Two-factor OTP email verification before file access",
-      "Binary file encryption & hidden storage",
-      "Atomic JDBC database transaction control",
+      "In-Memory Binary Ingestion: Ingests raw file byte streams directly into memory buffers without persistent caching traces.",
+      "Atomic Disk Scrubbing: Sanitizes and unlinks host disk sectors immediately upon ingestion to eliminate residual forensic footprints.",
+      "Dynamic MFA/OTP Perimeter: Time-bounded (5-min TTL) 6-digit OTP verification dispatched asynchronously via SMTP before granting access.",
+      "Bi-Directional Restoration: Atomically restores files to their exact original path or enables on-demand streaming downloads.",
+      "Tactical HUD Interface: Synchronized Light/Dark dashboard with live telemetry computing storage reclaimed and backend health metrics.",
     ],
   },
 
@@ -570,7 +614,7 @@ export const PROJECTS: Project[] = [
       "Node.js",
     ],
     github:
-      "https://github.com/satwik12dev/LPBEI.git",
+      "https://github.com/satwik12dev/BookingWebApplication",
     demo: "#",
     accent: "#0EA5E9",
     category: "Full-Stack & Backend",
@@ -579,32 +623,6 @@ export const PROJECTS: Project[] = [
       "Real-time fleet status & rental availability",
       "Dynamic price estimation and booking scheduling",
       "Responsive state management for mobile and desktop",
-    ],
-  },
-
-  {
-    title: "Cat & Dog Image Classification",
-    description:
-      "A Deep Learning computer vision system utilizing Convolutional Neural Networks (CNN) and TensorFlow to classify images with high accuracy, paired with an interactive Streamlit inference UI.",
-    image: "cat.png",
-    stack: [
-      "Python",
-      "TensorFlow",
-      "CNN",
-      "Deep Learning",
-      "Streamlit",
-      "Keras",
-    ],
-    github:
-      "https://github.com/satwik12dev/Image-Classification-of-cat--and-dog-using-CNN-DL",
-    demo: "#",
-    accent: "#8B5CF6",
-    category: "AI & Gen-AI",
-    impact: "Convolutional Neural Nets • Streamlit UI",
-    highlights: [
-      "Multi-layer CNN architecture trained on Kaggle datasets",
-      "Real-time image upload & probability prediction",
-      "Data augmentation pipelines to prevent overfitting",
     ],
   },
 ];
