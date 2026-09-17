@@ -117,7 +117,7 @@ export default function Contact() {
       setLoading(true);
 
       const response = await fetch(
-        "https://email-server-h3fp.onrender.com/api/contact",
+        "https://email-server-1-e9ua.onrender.com/api/contact",
         {
           method: "POST",
           headers: {
